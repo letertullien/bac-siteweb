@@ -1,0 +1,10 @@
+{
+  "description": "BacConnect streamlines waste collection by providing real-time data on bin status, reducing unnecessary pickups and ensuring cleaner environments for municipalities and campuses.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
