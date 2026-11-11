@@ -1,7 +1,15 @@
 {
-  "description": "BacConnect streamlines waste collection by providing real-time data on bin status, reducing unnecessary pickups and ensuring cleaner environments for municipalities and campuses.",
+  "title": "BacConnect",
+  "language": "fr",
+  "description": "BacConnect est un projet étudiant du Collège Ahuntsic qui mesure le poids et le niveau de remplissage des bacs à déchets et les affiche en temps réel dans une application mobile.",
   "robots": {
-    "index": false
+    "index": true
+  },
+  "icons": {
+    "icon": "/favicon.png"
+  },
+  "openGraph": {
+    "image": "https://bac-siteweb.vercel.app/favicon.png"
   },
   "accessibility": {
     "addBypassLinks": false,
