@@ -26,15 +26,6 @@ const MEMBERS: Member[] = [
     bio: "Je m'appelle Tertullien. Avant l'AEC, j'ai passé neuf ans à concevoir et à réparer des balances électroniques industrielles, alors mesurer une masse avec précision, c'est un peu mon terrain de jeu. Dans BacConnect, j'ai pris en charge l'électronique : j'ai monté le prototype et fait parler les capteurs avec l'application. Ce que j'ai le plus aimé, c'est voir mon ancien métier et mon nouveau se rencontrer dans un même projet.",
   },
   {
-    name: 'Elda WAMBA',
-    firstName: 'Elda',
-    initials: 'EW',
-    role: 'Backend · API REST Node.js / Express et base MySQL',
-    contribution: "Conception de l'API REST et de la base de données MySQL. Calcul du remplissage, décision de ramassage et simulateur qui génère les autres bacs du tableau de bord.",
-    photo: eldaPhoto,
-    bio: null,
-  },
-  {
     name: 'Hadjer AIT HADI',
     firstName: 'Hadjer',
     initials: 'HA',
@@ -42,6 +33,15 @@ const MEMBERS: Member[] = [
     contribution: "Conception des écrans de gestion des bacs et des zones, ainsi que du tableau de bord. Réalisation de l'assistant de calibrage en 5 étapes et de l'authentification simple.",
     photo: hadjerPhoto,
     bio: "Je m'appelle Hadjer Ait Hadi. Avant l'AEC, j'ai étudié en construction mécanique, ce qui m'a appris comment les choses sont conçues. Dans BacConnect, j'ai pris en charge le frontend : l'interface qui affiche la masse et la profondeur du bac. Ma plus grande satisfaction, c'est de voir BacConnect prendre vie grâce au travail de toute l'équipe.",
+  },
+  {
+    name: 'Elda WAMBA',
+    firstName: 'Elda',
+    initials: 'EW',
+    role: 'Backend · API REST Node.js / Express et base MySQL',
+    contribution: "Conception de l'API REST et de la base de données MySQL. Calcul du remplissage, décision de ramassage et simulateur qui génère les autres bacs du tableau de bord.",
+    photo: eldaPhoto,
+    bio: null,
   },
 ]
 
