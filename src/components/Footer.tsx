@@ -9,7 +9,7 @@ export function Footer() {
     <footer id="contact" className="scroll-mt-16 py-16 px-6 bg-bg border-t border-pale">
       <div className="max-w-5xl mx-auto grid gap-10 md:grid-cols-3 md:items-start text-center md:text-left">
         <div className="flex flex-col items-center md:items-start gap-4">
-          <img src={logoColor} alt="BacConnect, bacs intelligents" className="h-12 object-contain" />
+          <img src={logoColor} alt="BacConnect, bacs intelligents" className="h-12 object-contain mix-blend-multiply" />
           <p className="text-sm text-text/60">
             Projet intégrateur · Collège Ahuntsic, Montréal<br />
             AEC Développement d'applications mobiles

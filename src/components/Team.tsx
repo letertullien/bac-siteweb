@@ -46,7 +46,7 @@ const MEMBERS: Member[] = [
     role: 'Frontend · Application mobile React Native / Expo',
     contribution: "Conception des écrans de gestion des bacs et des zones, ainsi que du tableau de bord. Réalisation de l'assistant de calibrage en 5 étapes et de l'authentification simple.",
     photo: null,
-    bio: null,
+    bio: "Je m'appelle Hadjer Ait Hadi. Avant l'AEC, j'ai étudié en construction mécanique, ce qui m'a appris comment les choses sont conçues. Dans BacConnect, j'ai pris en charge le frontend : l'interface qui affiche la masse et la profondeur du bac. Ma plus grande satisfaction, c'est de voir BacConnect prendre vie grâce au travail de toute l'équipe.",
   },
 ]
 
