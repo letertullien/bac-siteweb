@@ -1,5 +1,5 @@
 import groupPhoto from '../assets/group-photo.png'
-import tertullienPhoto from '../assets/tertullien.jpeg'
+import tertullienPhoto from '../assets/Tertullien_web.jpg'
 import hadjerPhoto from '../assets/Hadjer_web.jpg'
 import { Placeholder } from './Placeholder'
 import { Section } from './Section'
