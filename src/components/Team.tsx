@@ -1,6 +1,6 @@
-import type { CSSProperties } from 'react'
 import groupPhoto from '../assets/group-photo.png'
 import tertullienPhoto from '../assets/tertullien.jpeg'
+import hadjerPhoto from '../assets/Hadjer_web.jpg'
 import { Placeholder } from './Placeholder'
 import { Section } from './Section'
 
@@ -11,7 +11,6 @@ type Member = {
   role: string
   contribution: string
   photo: string | null
-  photoStyle?: CSSProperties
   bio: string | null
 }
 
@@ -23,11 +22,6 @@ const MEMBERS: Member[] = [
     role: 'Électronique · Prototype du bac',
     contribution: 'Conception et montage du prototype : alimentation, ESP8266, HX711 et HC-SR04. Programmation de la lecture alternée des capteurs et de la transmission des mesures par Internet.',
     photo: tertullienPhoto,
-    photoStyle: {
-      objectPosition: '50% 20%',
-      transformOrigin: '63.9% 31.1%',
-      transform: 'translate(-13.9%, 18.9%) scale(2.1)',
-    },
     bio: "Je m'appelle Tertullien. Avant l'AEC, j'ai passé neuf ans à concevoir et à réparer des balances électroniques industrielles, alors mesurer une masse avec précision, c'est un peu mon terrain de jeu. Dans BacConnect, j'ai pris en charge l'électronique : j'ai monté le prototype et fait parler les capteurs avec l'application. Ce que j'ai le plus aimé, c'est voir mon ancien métier et mon nouveau se rencontrer dans un même projet.",
   },
   {
@@ -45,7 +39,7 @@ const MEMBERS: Member[] = [
     initials: 'HA',
     role: 'Frontend · Application mobile React Native / Expo',
     contribution: "Conception des écrans de gestion des bacs et des zones, ainsi que du tableau de bord. Réalisation de l'assistant de calibrage en 5 étapes et de l'authentification simple.",
-    photo: null,
+    photo: hadjerPhoto,
     bio: "Je m'appelle Hadjer Ait Hadi. Avant l'AEC, j'ai étudié en construction mécanique, ce qui m'a appris comment les choses sont conçues. Dans BacConnect, j'ai pris en charge le frontend : l'interface qui affiche la masse et la profondeur du bac. Ma plus grande satisfaction, c'est de voir BacConnect prendre vie grâce au travail de toute l'équipe.",
   },
 ]
@@ -74,11 +68,11 @@ export function Team() {
           <div key={m.name} className="grid grid-rows-subgrid row-span-2 mb-6 md:mb-0">
             <div className="flex flex-col items-center text-center p-6 rounded-2xl border" style={{ backgroundColor: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.08)' }}>
               {m.photo ? (
-                <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-2 border-vivid">
-                  <img src={m.photo} alt={m.name} className="w-full h-full object-cover" style={m.photoStyle} />
+                <div className="w-44 max-w-full aspect-[4/5] rounded-2xl overflow-hidden mb-4 border-2 border-vivid">
+                  <img src={m.photo} alt={m.name} className="w-full h-full object-cover object-top" />
                 </div>
               ) : (
-                <div className="w-24 h-24 rounded-full flex items-center justify-center text-2xl font-black mb-4 border-2 border-vivid text-vivid" style={{ backgroundColor: 'rgba(76,187,108,0.15)' }}>
+                <div className="w-44 max-w-full aspect-[4/5] rounded-2xl flex items-center justify-center text-4xl font-black mb-4 border-2 border-vivid text-vivid" style={{ backgroundColor: 'rgba(76,187,108,0.15)' }}>
                   {m.initials}
                 </div>
               )}
