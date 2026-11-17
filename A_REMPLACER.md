@@ -8,7 +8,6 @@ Où placer les fichiers :
 
 | # | Section | Fichier | Ce qu'il faut fournir | Format conseillé | Où le renseigner |
 |---|---|---|---|---|---|
-| 1 | Le prototype | `src/components/Prototype.tsx` | Photo du montage réel du prototype dans son boîtier | JPG ou WebP, paysage 4:3, environ 1600 × 1200 px, moins de 400 Ko | Constante `PROTOTYPE_PHOTO` |
 | 2 | L'application | `src/components/AppShowcase.tsx` | Capture ou courte vidéo : tableau de bord | Image PNG ou WebP en portrait 9:16 (environ 860 × 1840 px), ou vidéo MP4 (H.264) sans son de 15 s maximum, moins de 3 Mo | `media` de l'élément « Tableau de bord » dans `FEATURES` : `{ kind: 'image', src: … }` ou `{ kind: 'video', src: '/videos/…' }` |
 | 3 | L'application | `src/components/AppShowcase.tsx` | Capture ou courte vidéo : liste des bacs | Idem n° 2 | `media` de « Liste des bacs » |
 | 4 | L'application | `src/components/AppShowcase.tsx` | Capture ou courte vidéo : assistant de calibrage | Idem n° 2 | `media` de « Assistant de calibrage » |

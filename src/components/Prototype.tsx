@@ -1,8 +1,9 @@
 import type { ReactNode } from 'react'
+import prototypePhoto from '../assets/prototype-1600.jpeg'
 import { Placeholder } from './Placeholder'
 import { Section, SectionHeading } from './Section'
 
-const PROTOTYPE_PHOTO: string | null = null
+const PROTOTYPE_PHOTO: string | null = prototypePhoto
 
 function BatteryIcon() {
   return (
@@ -52,7 +53,7 @@ export function Prototype() {
       />
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {PROTOTYPE_PHOTO ? (
-          <img src={PROTOTYPE_PHOTO} alt="Montage du prototype BacConnect dans son boîtier" className="w-full aspect-[4/3] object-cover rounded-2xl" />
+          <img src={PROTOTYPE_PHOTO} alt="Montage électronique du prototype BacConnect dans son boîtier" className="w-full aspect-[4/3] object-cover rounded-2xl" />
         ) : (
           <Placeholder label="photo du montage réel du prototype dans son boîtier" className="aspect-[4/3]" />
         )}
