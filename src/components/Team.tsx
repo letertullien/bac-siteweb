@@ -1,6 +1,7 @@
 import groupPhoto from '../assets/group-photo.png'
 import tertullienPhoto from '../assets/Tertullien_web.jpg'
 import hadjerPhoto from '../assets/Hadjer_web.jpg'
+import eldaPhoto from '../assets/Elda_web.jpg'
 import { Placeholder } from './Placeholder'
 import { Section } from './Section'
 
@@ -30,7 +31,7 @@ const MEMBERS: Member[] = [
     initials: 'EW',
     role: 'Backend · API REST Node.js / Express et base MySQL',
     contribution: "Conception de l'API REST et de la base de données MySQL. Calcul du remplissage, décision de ramassage et simulateur qui génère les autres bacs du tableau de bord.",
-    photo: null,
+    photo: eldaPhoto,
     bio: null,
   },
   {
