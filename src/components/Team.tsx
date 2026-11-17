@@ -41,7 +41,7 @@ const MEMBERS: Member[] = [
     role: 'Backend · API REST Node.js / Express et base MySQL',
     contribution: "Conception de l'API REST et de la base de données MySQL. Calcul du remplissage, décision de ramassage et simulateur qui génère les autres bacs du tableau de bord.",
     photo: eldaPhoto,
-    bio: null,
+    bio: "Je m'appelle Elda Wamba. Avant l'AEC, j'étais déjà photographe, vidéaste et community manager : j'aidais les entreprises à créer et à gérer leur contenu sur les réseaux sociaux, ce qui m'a mené à fonder Wamba Studio Inc. Dans BacConnect, j'ai pris en charge le backend : l'API et la base de données qui reçoivent les mesures des capteurs et les envoient à l'application. Ce que j'ai le plus aimé, c'est de passer de l'autre côté de l'écran et de construire ce qui fait fonctionner une application, plutôt que seulement ce qu'on voit.",
   },
 ]
 
