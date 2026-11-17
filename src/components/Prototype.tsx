@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import prototypePhoto from '../assets/prototype-1600.jpeg'
+import prototypePhoto from '../assets/Prototype_final.jpg'
 import { Placeholder } from './Placeholder'
 import { Section, SectionHeading } from './Section'
 
@@ -53,7 +53,7 @@ export function Prototype() {
       />
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {PROTOTYPE_PHOTO ? (
-          <img src={PROTOTYPE_PHOTO} alt="Montage électronique du prototype BacConnect dans son boîtier" className="w-full aspect-[4/3] object-cover rounded-2xl" />
+          <img src={PROTOTYPE_PHOTO} alt="Boîtier ouvert du prototype BacConnect vu du dessus, avec la plaque de prototypage, le module HX711, la carte ESP8266, le powerbank et la LED rouge allumée." className="w-full aspect-[4/3] object-cover rounded-2xl" />
         ) : (
           <Placeholder label="photo du montage réel du prototype dans son boîtier" className="aspect-[4/3]" />
         )}
