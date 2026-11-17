@@ -1,6 +1,7 @@
 import { About } from './components/About'
 import { AppShowcase } from './components/AppShowcase'
 import { Architecture } from './components/Architecture'
+import { CityResults } from './components/CityResults'
 import { DemoVideo } from './components/DemoVideo'
 import { Footer } from './components/Footer'
 import { FutureWork } from './components/FutureWork'
@@ -18,6 +19,7 @@ export default function App() {
       <main>
         <Hero />
         <Problem />
+        <CityResults />
         <About />
         <HowItWorks />
         <Architecture />

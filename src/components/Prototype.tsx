@@ -25,13 +25,13 @@ const COMPONENTS: { icon: ReactNode; color: string; name: string; desc: string }
     icon: '📶',
     color: '#4CBB6C',
     name: 'Carte ESP-12E (ESP8266)',
-    desc: 'Lit les capteurs à tour de rôle et transmet les mesures au serveur par WiFi, toutes les 500 ms.',
+    desc: 'Lit les capteurs à tour de rôle et transmet les mesures au serveur par Internet, en continu.',
   },
   {
     icon: '⚖️',
     color: '#D9822B',
     name: 'Cellule de charge et HX711',
-    desc: "La cellule placée sous le bac mesure son poids. Le module HX711 convertit ce signal pour l'ESP8266.",
+    desc: "La cellule placée sous le bac mesure sa masse. Le module HX711 convertit ce signal pour l'ESP8266.",
   },
   {
     icon: '🔊',
@@ -48,7 +48,7 @@ export function Prototype() {
         tone="light"
         eyebrow="Le matériel"
         title="Le prototype"
-        intro="Notre bac de démonstration contient quatre composants, montés dans un boîtier."
+        intro="Notre bac de démonstration contient quatre composants principaux, montés dans un boîtier."
       />
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {PROTOTYPE_PHOTO ? (

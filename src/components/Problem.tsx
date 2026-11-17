@@ -16,31 +16,39 @@ const PROBLEMS = [
   {
     icon: '⚠️',
     title: 'Risque pour les employés',
-    desc: 'Un bac trop lourd est dangereux à soulever. Sans mesure du poids, personne ne le sait avant de le manipuler.',
+    desc: 'Un bac trop lourd est dangereux à soulever. Sans mesure de la masse, personne ne le sait avant de le manipuler.',
     accent: '#C8402F',
   },
 ]
 
 const CONTRIBUTIONS = [
   {
-    title: 'Deux capteurs qui se complètent',
-    desc: "Un bac de matières légères peut être plein en volume avec un poids faible. Un bac de matières lourdes peut être trop lourd avant d'être plein. Mesurer les deux évite de rater l'un de ces cas.",
+    title: 'Moins de tournées, moins de dépenses',
+    desc: "Chaque passage évité, c'est du carburant, des heures de travail et des kilomètres en moins.",
   },
   {
-    title: 'Une vue par zone',
-    desc: 'Le gestionnaire voit quelles zones demandent un passage. Le seuil se règle zone par zone.',
+    title: 'Une flotte qui dure plus longtemps',
+    desc: "Moins de kilomètres, c'est moins d'usure et d'entretien, et un remplacement des camions qui peut être repoussé.",
   },
   {
-    title: 'Le poids excessif repéré avant la collecte',
-    desc: "Un bac trop lourd apparaît en orange ou en rouge dans le tableau de bord, avant que l'équipe ne le soulève. Il n'y a pas de notification automatique.",
+    title: "Moins de collectes d'urgence",
+    desc: "Un bac qui déborde entraîne des passages imprévus, du nettoyage et des plaintes. Le repérer avant permet de l'éviter.",
   },
   {
-    title: 'Une installation sans expertise technique',
-    desc: "Le calibrage guidé en cinq étapes permet d'équiper un nouveau bac sans connaissances en électronique.",
+    title: "Moins d'accidents de travail",
+    desc: "Un bac en surcharge est repéré avant d'être soulevé. Moins de blessures, c'est aussi moins d'absences et de frais.",
   },
   {
-    title: 'Du matériel peu coûteux',
-    desc: 'Un microcontrôleur et deux capteurs courants suffisent.',
+    title: 'Des décisions appuyées sur des données',
+    desc: 'Le gestionnaire voit quelles zones demandent un passage et peut mieux répartir ses équipes et ses véhicules.',
+  },
+  {
+    title: 'Un investissement modeste',
+    desc: 'Du matériel courant et un calibrage guidé en cinq étapes, sans technicien spécialisé.',
+  },
+  {
+    title: 'Une technologie qui dépasse les déchets',
+    desc: "Le même principe s'applique aux conteneurs de chantier, aux hôtels et restaurants, aux huiles usagées, aux silos agricoles et aux réservoirs industriels.",
   },
 ]
 
@@ -66,12 +74,14 @@ export function Problem() {
       <div className="mt-12 rounded-2xl border border-pale bg-white p-7 md:p-10">
         <h3 className="text-2xl font-black text-forest">Ce que BacConnect apporte</h3>
         <p className="mt-3 text-sm leading-relaxed text-text/70">
-          Notre objectif est de réduire les trajets inutiles en collectant au bon moment.
-          Ce n'est pas encore un résultat mesuré : notre prototype sert d'abord à montrer que la mesure du remplissage est fiable.
+          La collecte et le transport représentent une part importante du budget de gestion des matières résiduelles d'une ville. Pourtant, une partie des passages se fait devant des bacs à moitié vides, pendant que d'autres débordent. BacConnect aide à n'envoyer un camion que là où c'est nécessaire.
+        </p>
+        <p className="mt-3 text-sm leading-relaxed">
+          <a href="#resultats" className="underline text-medium hover:text-forest">Voir les résultats obtenus par des villes équipées.</a>
         </p>
         <ul className="mt-6 grid gap-5 md:grid-cols-2">
-          {CONTRIBUTIONS.map(c => (
-            <li key={c.title} className="flex gap-3">
+          {CONTRIBUTIONS.map((c, i) => (
+            <li key={c.title} className={`flex gap-3 ${i === CONTRIBUTIONS.length - 1 ? 'md:col-span-2' : ''}`}>
               <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-vivid" />
               <div>
                 <h4 className="font-bold text-forest">{c.title}</h4>

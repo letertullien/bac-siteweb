@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 
-export type Tone = 'light' | 'dark'
+export type Tone = 'light' | 'dark' | 'pale'
 
 type SectionProps = {
   id?: string
@@ -11,7 +11,7 @@ type SectionProps = {
 
 export function Section({ id, tone, width = 'md', children }: SectionProps) {
   return (
-    <section id={id} className={`scroll-mt-16 py-24 px-6 ${tone === 'dark' ? 'bg-forest' : 'bg-bg'}`}>
+    <section id={id} className={`scroll-mt-16 py-24 px-6 ${tone === 'dark' ? 'bg-forest' : tone === 'pale' ? 'bg-pale' : 'bg-bg'}`}>
       <div className={`mx-auto ${width === 'lg' ? 'max-w-6xl' : 'max-w-5xl'}`}>{children}</div>
     </section>
   )

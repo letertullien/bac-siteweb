@@ -5,7 +5,7 @@ const STEPS = [
     step: '01',
     title: 'Mesurer',
     icon: '📡',
-    desc: "Le bac lit son poids avec la balance HX711 et la hauteur des déchets avec le capteur ultrasonique HC-SR04. Il envoie ses mesures toutes les 500 ms.",
+    desc: "Le bac mesure sa masse avec une cellule de charge reliée au module HX711. Il mesure la hauteur des déchets avec le capteur ultrasonique HC-SR04. Il envoie ses mesures en continu.",
   },
   {
     step: '02',
@@ -17,7 +17,7 @@ const STEPS = [
     step: '03',
     title: 'Agir',
     icon: '📱',
-    desc: "L'application affiche l'état de chaque bac, rafraîchi chaque seconde. Le gestionnaire voit quels bacs vider et quelles zones sont critiques.",
+    desc: "L'application affiche l'état de chaque bac, rafraîchi en continu. Le gestionnaire voit quels bacs vider et quelles zones sont critiques.",
   },
 ]
 

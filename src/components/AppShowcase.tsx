@@ -9,7 +9,7 @@ const FEATURES: { icon: string; title: string; desc: string; media: Media }[] = 
   {
     icon: '📊',
     title: 'Tableau de bord',
-    desc: 'Nombre de bacs à vider, zones critiques en premier, et vue animée du bac prototype avec son poids et son niveau.',
+    desc: 'Nombre de bacs à vider, zones critiques en premier, et vue animée du bac prototype avec sa masse et son niveau.',
     media: null,
   },
   {
@@ -49,7 +49,7 @@ export function AppShowcase() {
         tone="dark"
         eyebrow="L'outil de gestion"
         title="L'application mobile"
-        intro="Une application React Native / Expo pour iOS et Android. Elle lit l'état des bacs sur le serveur chaque seconde et l'affiche sans le recalculer."
+        intro="Une application React Native / Expo pour iOS et Android. Elle lit l'état des bacs sur le serveur en continu et l'affiche sans le recalculer."
       />
       <div className="flex justify-center gap-4 min-w-0">
         <div className="flex-1 min-w-0 max-w-44 rounded-3xl overflow-hidden shadow-2xl border-4" style={{ borderColor: 'rgba(76,187,108,0.3)' }}>

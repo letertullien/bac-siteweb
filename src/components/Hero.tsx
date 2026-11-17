@@ -1,7 +1,7 @@
 import binIllustration from '../assets/img4.png'
 
 const STATS = [
-  { val: '500 ms', label: 'Fréquence de mesure' },
+  { val: '2 capteurs', label: 'Masse · Hauteur' },
   { val: '3 états', label: 'Vert · Orange · Rouge' },
   { val: 'ESP8266', label: 'Microcontrôleur du bac' },
 ]
@@ -27,11 +27,11 @@ export function Hero() {
             <span className="text-vivid">quand ils sont pleins</span>
           </h1>
           <p className="text-lg text-white/70 mb-8 leading-relaxed">
-            Nous avons construit un prototype de bac qui mesure son poids et la hauteur de ses déchets.
+            Nous avons construit un prototype de bac qui mesure sa masse et la hauteur de ses déchets.
             Une application mobile affiche l'état de chaque bac. Le gestionnaire peut ainsi décider quand faire la collecte.
           </p>
           <div className="flex flex-wrap gap-4">
-            <a href="#a-propos" className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-white bg-medium transition-all hover:scale-105">
+            <a href="#demo" className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-white bg-medium transition-all hover:scale-105">
               Découvrir le projet
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </a>

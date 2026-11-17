@@ -14,12 +14,11 @@ Où placer les fichiers :
 | 4 | L'application | `src/components/AppShowcase.tsx` | Capture ou courte vidéo : assistant de calibrage | Idem n° 2 | `media` de « Assistant de calibrage » |
 | 5 | L'application | `src/components/AppShowcase.tsx` | Capture ou courte vidéo : gestion des zones | Idem n° 2 | `media` de « Gestion des zones » |
 | 6 | Démo vidéo | `src/components/DemoVideo.tsx` | Vidéo de démonstration : le bac et l'application en fonctionnement | 16:9, 1080p, 1 à 3 minutes. Soit une URL YouTube intégrée (`https://www.youtube.com/embed/IDENTIFIANT`), soit un fichier MP4 (H.264) dans `public/videos/` | Constante `VIDEO_URL` |
-| 7 | Équipe | `src/components/Team.tsx` | Photo de Tertullien KOUMETIO TANE | JPG ou WebP carré, 600 × 600 px, moins de 200 Ko | `photo` de Tertullien dans `MEMBERS` |
-| 8 | Équipe | `src/components/Team.tsx` | Photo d'Elda WAMBA | Idem n° 7 | `photo` d'Elda |
-| 9 | Équipe | `src/components/Team.tsx` | Photo de Hadjer AIT HADI | Idem n° 7 | `photo` de Hadjer |
-| 10 | Équipe | `src/components/Team.tsx` | Présentation personnelle de Tertullien KOUMETIO TANE | Texte de 3 ou 4 phrases, au « je », sans tiret cadratin | `bio` de Tertullien |
-| 11 | Équipe | `src/components/Team.tsx` | Présentation personnelle d'Elda WAMBA | Idem n° 10 | `bio` d'Elda |
-| 12 | Équipe | `src/components/Team.tsx` | Présentation personnelle de Hadjer AIT HADI | Idem n° 10 | `bio` de Hadjer |
+| 8 | Équipe | `src/components/Team.tsx` | Photo d'Elda WAMBA | JPG ou WebP carré, 600 × 600 px, moins de 200 Ko | `photo` d'Elda dans `MEMBERS` |
+| 9 | Équipe | `src/components/Team.tsx` | Photo de Hadjer AIT HADI | Idem n° 8 | `photo` de Hadjer |
+| 11 | Équipe | `src/components/Team.tsx` | Présentation personnelle d'Elda WAMBA | Texte de 3 ou 4 phrases, au « je », sans tiret cadratin | `bio` d'Elda |
+| 12 | Équipe | `src/components/Team.tsx` | Présentation personnelle de Hadjer AIT HADI | Idem n° 11 | `bio` de Hadjer |
+| 13 | Équipe | `src/components/Team.tsx` | Photo de groupe définitive (la photo actuelle est provisoire et s'affiche sans cadre « À REMPLACER ») | JPG ou WebP en portrait 9:16, environ 1080 × 1920 px, moins de 400 Ko | Import `groupPhoto` en haut du fichier (actuellement `src/assets/group-photo.png`) |
 
 ## À revoir (facultatif)
 

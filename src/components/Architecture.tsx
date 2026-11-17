@@ -3,17 +3,17 @@ import { BinGauge } from './BinGauge'
 import { Section, SectionHeading } from './Section'
 
 const TECHNOLOGIES = [
-  { name: 'ESP8266', sub: 'C++ / Arduino', emoji: '🔌', role: 'Lit les deux capteurs à tour de rôle et envoie les mesures au serveur par WiFi.' },
+  { name: 'ESP8266', sub: 'C++ / Arduino', emoji: '🔌', role: 'Lit les deux capteurs à tour de rôle et envoie les mesures au serveur par Internet.' },
   { name: 'Node.js', sub: 'Express · REST', emoji: '🟩', role: 'Reçoit les mesures, calcule les pourcentages et décide du statut de ramassage.' },
   { name: 'MySQL', sub: 'Base de données', emoji: '🗄️', role: 'Conserve les bacs, les zones et leurs paramètres de calibrage.' },
   { name: 'React Native', sub: 'Expo', emoji: '⚛️', role: "Affiche l'état des bacs et des zones tel que le serveur le fournit." },
 ]
 
 const TECHNICAL_CHOICES = [
-  "Capteur ultrasonique HC-SR04 plutôt que le capteur laser VL53L0X prévu au départ : le laser devenait instable au-delà d'environ un mètre.",
+  'Capteur ultrasonique HC-SR04 plutôt que le capteur laser VL53L0X prévu au départ : il s\'est montré plus stable et offre une plus grande portée.',
   'Lecture strictement alternée des deux capteurs : chacun utilise une lecture bloquante, et les lire en même temps provoquait des interférences.',
   "Le backend est la seule source de vérité : l'application n'invente et ne recalcule aucune valeur.",
-  "Rafraîchissement périodique plutôt qu'une connexion WebSocket : c'est suffisant pour le prototype.",
+  'Des échanges HTTP simples et fiables pour le prototype, avec un passage prévu à MQTT pour la version finale.',
   'Alimentation filtrée localement et masses câblées en étoile, pour que les modules ne se perturbent pas entre eux.',
 ]
 
@@ -25,7 +25,7 @@ const STATES = [
     title: 'Normal',
     weight: 60,
     depth: 45,
-    desc: 'Le poids reste sous 100 % du maximum et la profondeur sous 100 %. Aucune action nécessaire.',
+    desc: 'La masse reste sous 100 % du maximum et la profondeur sous 100 %. Aucune action nécessaire.',
   },
   {
     color: '#D9822B',
@@ -34,7 +34,7 @@ const STATES = [
     title: 'Avertissement',
     weight: 110,
     depth: 70,
-    desc: 'Le poids est entre 100 et 120 % du maximum. Le bac apparaît en orange dans le tableau de bord : une collecte est à prévoir.',
+    desc: 'La masse est entre 100 et 120 % du maximum. Le bac apparaît en orange dans le tableau de bord : une collecte est à prévoir.',
   },
   {
     color: '#C8402F',
@@ -43,7 +43,7 @@ const STATES = [
     title: 'Collecte nécessaire',
     weight: 90,
     depth: 100,
-    desc: 'La profondeur atteint 100 %, ou le poids dépasse 120 % du maximum. Le bac doit être vidé.',
+    desc: 'La profondeur atteint 100 %, ou la masse dépasse 120 % du maximum. Le bac doit être vidé.',
   },
 ]
 
@@ -54,13 +54,12 @@ export function Architecture() {
         tone="dark"
         eyebrow="Architecture"
         title="Comment les composantes communiquent"
-        intro="Le bac, le serveur et l'application sont connectés au même point d'accès WiFi. Le bac envoie ses mesures, le serveur les interprète et l'application affiche le résultat."
+        intro="Le bac envoie ses mesures par Internet, le serveur les interprète et l'application affiche les résultats."
       />
 
       <ArchitectureDiagram />
 
       <p className="mt-6 max-w-3xl mx-auto text-center text-sm leading-relaxed text-white/60">
-        Pour la démonstration, les échanges passent en HTTP sur un réseau local : c'est ce qui nous garantit une démo stable.
         La version finale du système passera au protocole MQTT, le standard de l'Internet des objets, plus léger pour des envois fréquents.
       </p>
 
@@ -90,7 +89,7 @@ export function Architecture() {
       <div className="mt-20">
         <h3 className="text-2xl md:text-3xl font-black text-white text-center">La logique de ramassage</h3>
         <p className="mt-4 mb-10 max-w-2xl mx-auto text-center text-base leading-relaxed text-white/60">
-          Le serveur calcule deux pourcentages : le poids par rapport au poids maximal, et la hauteur des déchets par rapport à la profondeur du bac.
+          Le serveur calcule deux pourcentages : la masse par rapport à la masse maximale, et la hauteur des déchets par rapport à la profondeur du bac.
           Le remplissage retenu est le plus élevé des deux.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
@@ -101,7 +100,7 @@ export function Architecture() {
                 <h4 className="text-lg font-bold text-forest">{s.title}</h4>
               </div>
               <div className="flex justify-center gap-8">
-                <BinGauge pct={s.weight} color={s.color} label="Poids" />
+                <BinGauge pct={s.weight} color={s.color} label="Masse" />
                 <BinGauge pct={s.depth} color={s.color} label="Profondeur" />
               </div>
               <p className="text-sm leading-relaxed text-text/70">{s.desc}</p>

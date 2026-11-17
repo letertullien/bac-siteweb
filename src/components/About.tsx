@@ -27,8 +27,7 @@ export function About() {
       <div className="mt-10 max-w-3xl mx-auto p-6 rounded-2xl border-l-4 border-vivid" style={{ backgroundColor: 'rgba(76,187,108,0.1)' }}>
         <h3 className="font-bold text-white mb-2">Notre objectif</h3>
         <p className="text-sm leading-relaxed text-white/70">
-          Remplacer une collecte à horaire fixe par une collecte guidée par l'état réel des bacs.
-          BacConnect est un outil d'aide à la décision : il complète la planification existante, il ne la remplace pas.
+          Permettre de collecter chaque bac au bon moment. BacConnect s'appuie sur l'état réel des bacs pour rendre la planification de la collecte plus précise et plus efficace.
         </p>
       </div>
     </Section>
