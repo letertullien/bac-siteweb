@@ -1,4 +1,4 @@
-import groupPhoto from '../assets/group-photo.png'
+import groupPhoto from '../assets/photo_groupe.jpg'
 import tertullienPhoto from '../assets/Tertullien_web.jpg'
 import hadjerPhoto from '../assets/Hadjer_web.jpg'
 import eldaPhoto from '../assets/Elda_web.jpg'
@@ -61,7 +61,7 @@ export function Team() {
           </p>
         </div>
         <div className="aspect-[9/16] h-64 shrink-0 rounded-2xl overflow-hidden border-2" style={{ borderColor: 'rgba(76,187,108,0.3)' }}>
-          <img src={groupPhoto} alt="L'équipe BacConnect : Tertullien, Elda et Hadjer" className="h-full w-full scale-[1.4] object-cover" />
+          <img src={groupPhoto} alt="L'équipe BacConnect au Collège Ahuntsic" className="h-full w-full object-cover object-[center_top]" />
         </div>
       </div>
       <div className="grid md:grid-cols-3 gap-x-6 gap-y-4">

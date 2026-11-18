@@ -16,7 +16,7 @@ Où placer les fichiers :
 | 8 | Équipe | `src/components/Team.tsx` | Photo d'Elda WAMBA | JPG ou WebP carré, 600 × 600 px, moins de 200 Ko | `photo` d'Elda dans `MEMBERS` |
 | 9 | Équipe | `src/components/Team.tsx` | Photo de Hadjer AIT HADI | Idem n° 8 | `photo` de Hadjer |
 | 11 | Équipe | `src/components/Team.tsx` | Présentation personnelle d'Elda WAMBA | Texte de 3 ou 4 phrases, au « je », sans tiret cadratin | `bio` d'Elda |
-| 13 | Équipe | `src/components/Team.tsx` | Photo de groupe définitive (la photo actuelle est provisoire et s'affiche sans cadre « À REMPLACER ») | JPG ou WebP en portrait 9:16, environ 1080 × 1920 px, moins de 400 Ko | Import `groupPhoto` en haut du fichier (actuellement `src/assets/group-photo.png`) |
+| 13 | Équipe | `src/components/Team.tsx` | ✅ **Fait** : photo de groupe définitive en place | JPG portrait, 400 × 721 px, 58 Ko | Import `groupPhoto` en haut du fichier : `src/assets/photo_groupe.jpg` |
 
 ## À revoir (facultatif)
 
