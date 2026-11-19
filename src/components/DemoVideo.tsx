@@ -1,24 +1,5 @@
-import { Placeholder } from './Placeholder'
+import demoVideo from '../assets/BacConnect.mp4'
 import { Section, SectionHeading } from './Section'
-
-const VIDEO_URL: string = ''
-
-const isYouTube = (url: string) => /youtube\.com|youtu\.be|youtube-nocookie\.com/.test(url)
-
-function Player({ url }: { url: string }) {
-  if (isYouTube(url)) {
-    return (
-      <iframe
-        src={url}
-        title="Démonstration de BacConnect"
-        className="h-full w-full"
-        allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-        allowFullScreen
-      />
-    )
-  }
-  return <video src={url} className="h-full w-full bg-black" controls preload="metadata" playsInline />
-}
 
 export function DemoVideo() {
   return (
@@ -30,13 +11,12 @@ export function DemoVideo() {
         intro="Dans cette vidéo, nous montrons le bac et l'application en fonctionnement. Nous remplissons le bac et suivons son état en direct dans le tableau de bord."
       />
       <div className="mx-auto max-w-4xl">
-        {VIDEO_URL ? (
-          <div className="aspect-video w-full overflow-hidden rounded-2xl shadow-xl">
-            <Player url={VIDEO_URL} />
-          </div>
-        ) : (
-          <Placeholder label="vidéo de démonstration au format 16:9 (le bac et l'application en fonctionnement)" className="aspect-video w-full rounded-2xl" />
-        )}
+        <div className="aspect-video w-full overflow-hidden rounded-2xl border-2 shadow-xl bg-black" style={{ borderColor: 'rgba(76,187,108,0.3)' }}>
+          <video src={demoVideo} className="h-full w-full" controls playsInline preload="metadata" aria-label="Démonstration de BacConnect">
+            Votre navigateur ne peut pas lire cette vidéo.{' '}
+            <a href={demoVideo} download>Télécharger la vidéo de démonstration</a>.
+          </video>
+        </div>
       </div>
     </Section>
   )
